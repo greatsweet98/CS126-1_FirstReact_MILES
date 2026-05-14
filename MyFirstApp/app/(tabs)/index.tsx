@@ -16,6 +16,7 @@ export default function App() {
   );
 }
 
+//On 11:32AM on May 14, I changed the name, bio, pfp, and added a short desc
 const styles = StyleSheet.create({
   screen: {flex:1, alignItems:'center', justifyContent:'center'},
   photo: {width:120, height:120, borderRadius:60},

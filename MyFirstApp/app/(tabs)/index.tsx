@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1, alignItems: 'center', justifyContent: 'center', padding: 20
   },
-  screen: {flex:1, alignItems:'center', justifyContent:'center'},
   photo: {width:120, height:120, borderRadius:60, marginBottom:20},
   text: {fontSize: 16, marginVertical: 5},
   buttonContainer: {marginTop: 10, width: '60%'},

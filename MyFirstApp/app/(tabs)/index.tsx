@@ -3,43 +3,34 @@ import { View, Text, TextInput, Button, Image, ScrollView, StyleSheet } from 're
 
 export default function App() {
   const [name, setName] = useState('');
-  const [count, setCount] = useState(0);
-
-  const message =
-    count > 0
-      ? `${name}, you tapped ${count} times!`
-      : "Tap the + button to start";
 
   return (
-      <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.screen}>
+
         <Image
           source={{ uri: 'https://i1-c.pinimg.com/1200x/cc/52/e6/cc52e67593f815b1ca4d174e40ac83ef.jpg' }}
           style={styles.photo}
         />
-        <TextInput placeholder="Enter your name" onChangeText={setName} style={styles.input}/>
-        <Text style={styles.text}>{name === '' ? "Please enter your name" : `Hello, ${name}!`}</Text>
-        <Text style={styles.text}>{message}</Text>
-        <View style={styles.buttonContainer}>
-          <Button title="+" onPress={() => setCount(count + 1)} />
-          <Button title="-" onPress={() => setCount(count - 1)} />
-          <Button title="Reset" onPress={() => setCount(0)} />
-        </View>
-      </ScrollView>
+
+        <TextInput
+          placeholder="Type your name...."
+          onChangeText={setName}
+          style={{
+            height:40, margin:12, borderWidth:1, padding:10, width:200,
+          }}/>
+
+        <Text style={styles.name}>
+          Hello, {name}!
+        </Text>
+      </View>
   );
 }
 
-//On 11:32AM on May 14, I changed the name, bio, pfp, and added a short desc
+//On 6:56PM on May 14, I changed the whole screen into a simple interactive profile screen.
 const styles = StyleSheet.create({
-  container: {
-    flex: 1, alignItems: 'center', justifyContent: 'center', padding: 20
+  screen: {
+    flex: 1, alignItems: 'center', justifyContent: 'center',
   },
-  photo: {width:120, height:120, borderRadius:60, marginBottom:20},
-  text: {fontSize: 16, marginVertical: 5},
-  buttonContainer: {marginTop: 10, width: '60%'},
-  input: {
-    borderWidth: 1,
-    width: '80%',
-    padding: 10,
-    marginBottom: 10,
-  }
+  photo: {width:120, height:120, borderRadius:60,},
+  name: {fontSize: 22, fontWeight: 'bold', marginTop:12,},
 });

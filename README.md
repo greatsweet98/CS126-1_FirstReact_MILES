@@ -1,2 +1,2 @@
 # CS126-1_FirstReact_MILES
-Hi, I'm Gilly! Here's my FirstReact application!
+Hi, I'm Gilly! I've changed my screen to my profile card!
